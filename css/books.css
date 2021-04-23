@@ -1,0 +1,436 @@
+.bookshelf-row{
+	display:none;
+}
+
+.bookshelf{
+	transition:all 1s;
+}
+
+.bookshelf{
+    display: flex;
+    margin-top: 1vh;
+    justify-content: center;
+}
+
+.bookshelf .shelf{
+	width:426px;
+	height:440px;
+}
+
+.bookshelf .shelf .row-1{
+	position:relative;
+	width:100%;
+	height:158px;
+}
+
+.bookshelf .shelf .row-2{
+    position:relative;
+    margin-top:20px;
+    width:100%;
+    height:164px;
+}
+
+.bookshelf .shelf .row-3{
+    position:relative;
+    margin-top:40px;
+    width:100%;
+    height:172px;
+}
+
+.bookshelf .shelf .row-1:after {
+	background:url("https://netzulim.org/R/OrgR/Library/sherut/shelfR.png");
+	background-size:100%;
+	background-repeat: no-repeat;
+	background-position:bottom left;
+	width:100%;
+	height:210px;
+	display:block;
+	content:"";
+}
+
+.bookshelf .shelf .row-2:after {
+  background:url("https://netzulim.org/R/OrgR/Library/sherut/shelfR.png");
+	background-size:100%;
+	background-repeat: no-repeat;
+	background-position:bottom left;
+	width:100%;
+	height:216px;
+	display:block;
+	content:"";
+}
+
+.bookshelf .shelf .row-3:after {
+    background:url("https://netzulim.org/R/OrgR/Library/sherut/shelfR.png");
+      background-size:100%;
+      background-repeat: no-repeat;
+      background-position:bottom left;
+      width:100%;
+      height:222px;
+      display:block;
+      content:"";
+  }
+
+
+.bookshelf .shelf .loc{
+	position:absolute;
+	bottom:0;
+	width:100%;
+}
+
+.bookshelf .shelf .loc > div{
+	width:33%;
+    height:100%;
+    background-size: contain;
+	float:left;
+}
+
+.bookshelf .sample,
+.bookshelf-row .sample{
+	margin:auto;
+	position: relative;
+	z-index:1;
+	box-shadow:2px 2px 5px rgba(0,0,0,0.6);
+	transition:transform 0.1s;
+	transform:translate(0, 0);
+}
+
+.sample:hover{
+	z-index:2;
+	cursor: pointer;;
+	background-color:white;
+	transform: scale3d(1.1, 1.1, 1) translate3d(0, -5px, 0);
+}
+
+.bookshelf .book1,
+.bookshelf-row .book1{
+    background-image: url("/images/Book_DeepWork.jpg");
+    background-size: 83px 115px;
+    width:83px;
+	height:115px;
+}
+
+.bookshelf .book2,
+.bookshelf-row .book2{
+	background-image: url("/images/Book_LeanStartup.jpg");
+    background-size: 85px 115px;
+    width:85px;
+	height:115px;
+}
+
+.bookshelf .book3,
+.bookshelf-row .book3{
+	background-image: url("/images/Book_ZeroToOne.jpg");
+    background-size: 84px 115px;
+    width:84px;
+	height:115px;
+}
+
+.bookshelf .book4,
+.bookshelf-row .book4{
+	background-image: url("/images/Book_WarrenBuffett.jpg");
+    background-size: 91px 125px;
+    width:91px;
+	height:125px;
+
+}
+.bookshelf .book5,
+.bookshelf-row .book5{
+	background-image: url("/images/Book_AtomicHabits.jpg");
+    background-size: 91px 125px;
+    width:91px;
+	height:125px;
+}
+
+.bookshelf .book6,
+.bookshelf-row .book6{
+    background-image: url("/images/Book_CleanCode.jpg");
+    background-size: 91px 125px;
+    width:91px;
+    height:125px;  
+}
+
+.bookshelf .book7,
+.bookshelf-row .book7{
+	background-image: url("/images/Book_HowFinanceWorks.jpg");
+    background-size: 98px 135px;
+    width:98px;
+	height:135px;
+
+}
+
+/*
+.bookshelf .book8,
+.bookshelf-row .book8{
+	background-image: url("/images/Book_AtomicHabits.jpg");
+    background-size: 98px 135px;
+    width:98px;
+	height:135px;
+}
+
+.bookshelf .book9,
+.bookshelf-row .book9{
+    background-image: url("/images/Book_CleanCode.jpg");
+    background-size: 98px 135px;
+    width:98px;
+    height:135px;
+}*/
+
+/*==================================== LINE UNDER TITLES ======================================= */
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    float: none;
+}
+
+.line {
+    display: block;
+    width: 290px;
+    height: 3px;
+    padding: 0 !important;
+    background: #ccc;
+}
+
+.section {
+    margin: 100px 0px 200px 0px;
+    padding: 120px 0;
+    position: relative;
+}
+
+.section-title {
+    margin: 0 0 60px 0;
+    padding: 0;
+    font-size: 2.250em;
+    font-weight: 300;
+    color: #5A9ECF;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+#books {
+    height: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*==================================== MAIN PAGE OVERLAY ======================================= */
+
+#site-header {
+    position: fixed;
+    top: 0;
+    min-height: 50px;
+    width: 100%;
+    z-index: 100;
+    transition: all .3s ease;
+    box-shadow: 0 10px 25px -10px var(--navy-shadow);
+    backdrop-filter: blur(10px);
+}
+
+#site-header.hide {
+    top: -100px;
+}
+
+nav {
+    min-height: 60px;
+}
+
+#nav ul li {
+    padding: 0 16px;
+    line-height: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+#nav ul li a {
+    padding: 10px 20px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s
+}
+
+#nav ul li a:hover {
+    color: #5A9ECF;
+    cursor: pointer
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #0b1c28;
+    /* Margin bottom by footer height */
+}
+
+.footer {
+    /*
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    margin-top: 200px;*/
+    bottom: 0;
+    height: 2em;
+    left: 0;
+    position: relative;
+    width: 100%;
+    margin-bottom: -50px;
+    /* Vertically center the text there */
+}
+
+@media screen and (max-width: 800px) {
+    .footer {
+        margin-bottom: 0px;
+    }
+}
+
+/*==================================== LOADING SCREEN ======================================= */
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #5A9ECF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*==================================== SOCIAL MEDIA SIDE BAR ======================================= */
+
+svg {
+    width: 24;
+    height: 24;
+    fill: #fff
+}
+
+svg:hover {
+    fill: #5A9ECF;
+}
+
+.hbGQwI {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+    right: auto;
+    z-index: 10;
+    color: var(--light-slate);
+}
+
+@media (max-width: 768px) {
+    .hbGQwI {
+        display: none;
+    }
+}
+
+.fyBzSG {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.kZcFdB {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .kZcFdB {
+        display: block;
+        width: 100%;
+        max-width: 270px;
+        margin: 0px auto 10px;
+        color: var(--light-slate);
+    }
+}
+
+.kZcFdB ul {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+/*==================================== PAGE LOGO ======================================= */
+
+.logo {
+    margin: 0px 0px 0px 10px;
+}
+
+@media (max-width: 1080px) {
+    .logo {
+        margin: 0px 0px 0px 5px;
+    }
+}
+
+.bounce {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    height: 100%;
+    font: normal bold 6rem "Product Sans", sans-serif;
+    white-space: nowrap;
+}
+
+.letter {
+    animation: bounce 0.75s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+    display: inline-block;
+    transform: translate3d(0, 0, 0);
+    margin-top: 0.5em;
+    text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+    font: normal 500 6rem 'Varela Round', sans-serif;
+    font-size: 50px;
+}
+
+.letter:hover {
+    color: #5A9ECF;
+}
+
+#nav a:hover {
+    text-decoration: none;
+}
+
+.letter:nth-of-type(1) {
+    animation-delay: -0.083333333s;
+}
+
+.letter:nth-of-type(3) {
+    animation-delay: 0.0833333333s;
+}
+
+.letter:nth-of-type(4) {
+    animation-delay: 0.1666666667s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate3d(0, 0, 0);
+        text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+    }
+    100% {
+        transform: translate3d(0, -1em, 0);
+        text-shadow: rgba(255, 255, 255, 0.4) 0 1em 0.35em;
+    }
+}

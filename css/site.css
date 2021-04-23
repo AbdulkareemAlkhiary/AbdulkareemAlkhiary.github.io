@@ -1,0 +1,783 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+#site-header{
+    position: fixed;
+    top: 0;
+    min-height: 79px;
+    width: 100%;
+    z-index: 100;
+    transition: all .3s ease;
+    box-shadow: 0 10px 25px -10px var(--navy-shadow);
+    backdrop-filter: blur(10px);
+}
+
+#site-header.hide {
+    top: -100px;
+}
+
+nav {
+    min-height: 60px;
+}
+
+#nav ul li {
+    padding: 0 16px;
+    line-height: 30px;
+    display: inline-block;
+    text-transform: uppercase;
+}
+
+#nav ul li a {
+    padding: 10px 20px;
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: all 0.3s
+}
+
+#nav ul li a:hover {
+    color: #5A9ECF;
+    cursor: pointer
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #0b1c28;
+    /* Margin bottom by footer height */
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    white-space: nowrap;
+    line-height: 60px;
+    margin-top: 100px;
+    /* Vertically center the text there */
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+/*==================================== BOUNCING BALLS ======================================= */
+
+.ball {
+    position: absolute;
+    border-radius: 100%;
+    opacity: 0.7;
+}
+
+/*==================================== HERO SECTION ======================================= */
+
+.intro-headers {
+    margin: 0 0 25px 15px;
+}
+
+.info {
+    width: 100%;
+    height: 100%;
+    margin-top: 300px;
+    margin-bottom: 300px;
+    text-align: left;
+}
+
+#intro {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+@keyframes blink {
+    0% {
+        background-color: #ccc;
+    }
+    49% {
+        background-color: #ccc;
+    }
+    50% {
+        background-color: transparent;
+    }
+    99% {
+        background-color: transparent;
+    }
+    100% {
+        background-color: #ccc;
+    }
+}
+
+/*==================================== SECTIONS ======================================= */
+
+.section {
+    margin: 200px 0px 200px 0px;
+    padding: 120px 0;
+    position: relative;
+}
+
+.section-title {
+    margin: 0 0 60px 0;
+    padding: 0;
+    font-size: 2.250em;
+    font-weight: 300;
+    color: #5A9ECF;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    letter-spacing: 0.1em;
+}
+
+#about {
+    height: 600px;
+}
+
+@media screen and (max-width: 640px) {
+    #about {
+        margin-bottom: 300px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #about {
+        margin-bottom: 800px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #about {
+        margin-bottom: 900px;
+    }
+}
+
+#experience {
+    height: 600px;
+}
+
+@media screen and (max-width: 640px) {
+    #experience {
+        margin-bottom: 300px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #experience {
+        margin-bottom: 400px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #experience {
+        margin-bottom: 500px;
+    }
+}
+
+#projects {
+    height: 1100px;
+}
+
+@media screen and (max-width: 640px) {
+    #projects {
+        margin-bottom: 800px;
+    }
+}
+
+@media screen and (min-width: 641px) and (max-width: 990px) {
+    #projects {
+        margin-bottom: 1600px;
+    }
+}
+
+#books {
+    height: 400px;
+}
+
+@media screen and (max-width: 640px) {
+    #books {
+        margin-bottom: 200px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #books {
+        margin-bottom: 200px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #books {
+        margin-bottom: 200px;
+    }
+}
+
+#contact {
+    height: 700px;
+}
+
+/*==================================== BUTTON DESIGN ======================================= */
+
+.GetInTouch {
+    border-radius: 10px;
+    border: 2px solid #5A9ECF;
+    padding: 10px;
+    color: #5A9ECF;
+    text-decoration: none;
+}
+
+.GetInTouch:hover {
+    color: #5A9ECF;
+    background-color: #b0d1e8;
+    cursor: pointer
+}
+
+/*==================================== FADES IN SECTIONS ======================================= */
+
+.hideme {
+    opacity: 0;
+}
+
+/*==================================== LOADING SCREEN ======================================= */
+
+.loader-wrapper {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #5A9ECF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*==================================== CONTACT FORM ======================================= */
+
+input[type=text], select, textarea {
+    width: 600px;
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid gray;
+    color: #fff;
+    font-size: 18px;
+    margin-bottom: 16px
+}
+
+/* Adjusts CONTACT FORM size when screen is small*/
+
+@media screen and (max-width: 640px) {
+    input[type=text], select, textarea {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    input[type=text], select, textarea {
+        width: 100%;
+    }
+}
+
+/*==================================== LINE UNDER TITLES ======================================= */
+
+.centered {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    float: none;
+}
+
+.line {
+    display: block;
+    width: 290px;
+    height: 3px;
+    padding: 0 !important;
+    background: #ccc;
+}
+
+/*==================================== MY IMAGE ======================================= */
+
+.img-me {
+    filter: grayscale(100%) sepia(1) hue-rotate(150deg);
+    box-shadow: -5px 5px 5px 0px #ccc;
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0px -100px 0px 0px;
+}
+
+.img-me:hover {
+    filter: none;
+}
+
+@media (max-width: 800px) {
+    .img-me {
+        margin: 0px 0px 0px 0px;
+        max-width: 85%;
+    }
+}
+
+@media (max-width: 640px) {
+    .img-me {
+        margin: 0px 10px 0px 0px;
+        max-width: 90%;
+    }
+}
+
+/*==================================== CONTENT IN ABOUT SECTION ======================================= */
+
+.about-text {
+    font-size: 20px;
+    color: #fff;
+}
+
+@media (max-width: 800px) {
+    .about-text {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-text {
+        font-size: 18px;
+    }
+}
+
+.who-am-i {
+    font-size: 12px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    margin-bottom: 10px;
+    color: #fff
+}
+
+.my-name {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: #fff;
+    background: #5A9ECF;
+    padding: 5px 10px;
+    margin-bottom: 40px;
+}
+
+@media (max-width: 800px) {
+    .my-name {
+        font-size: 25px;
+    }
+}
+
+@media (max-width: 640px) {
+    .my-name {
+        font-size: 20px;
+    }
+}
+
+.col-lg-5, .offset-lg-1, .col-lg-6 {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.content {
+    padding: 1px;
+}
+
+@media (max-width: 992px) {
+    .content {
+        padding-top: 60px;
+        padding-left: 10px;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-5 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 41.666667%;
+        max-width: 41.666667%;
+    }
+}
+
+@media (max-width: 992px) {
+    .col-lg-5 img {
+        width: 90%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 992px) {
+    .offset-lg-1 {
+        margin-left: 8.333333%;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-lg-6 {
+        -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+/*==================================== CONTENT IN WORK SECTION ======================================= */
+
+.image-container {
+    position: relative;
+    width: var(--image-width);
+    height: var(--image-height);
+    overflow: hidden;
+    /* Just for style */
+    border-radius: 10px;
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.4);
+}
+
+.image-container>img {
+    /* We set the image to cover the size of the container (no stretch) */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    /* Positioning the overlay content */
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Animation types */
+
+.animate-opacity {
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+
+.image-container:hover .animate-opacity {
+    opacity: 1;
+}
+
+.animate-up {
+    box-shadow: 0 -10px 100px 0 rgba(0, 0, 0, 0.5);
+    top: 100%;
+    transition: top 300ms ease;
+}
+
+.image-container:hover .animate-up {
+    top: 0;
+}
+
+.animate-down {
+    box-shadow: 0 -10px 100px 0 rgba(0, 0, 0, 0.5);
+    top: -100%;
+    transition: top 300ms ease;
+}
+
+.image-container:hover .animate-down {
+    top: 0;
+}
+
+.image-overlay-body {
+    margin: 10px;
+    background: #FFF;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.image-overlay-body p, .image-overlay-body h3 {
+    margin: 0;
+}
+
+@media (min-width: 576px) {
+    .image-overlay-body h3 {
+        font-size: 99%;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-overlay-body h3 {
+        font-size: 95%;
+    }
+}
+
+@media (max-width: 576px) {
+    .image-overlay-body p {
+        font-size: 93%;
+    }
+}
+
+/*** Formats everything neatly ***/
+
+.item-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    -webkit-box-align: start;
+    -webkit-align-items: start;
+    -ms-flex-align: start;
+    align-items: start;
+    justify-items: center;
+    grid-gap: 4rem 3rem;
+}
+
+.single-item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    margin-top: 30px;
+}
+
+.thumbnail-wrap {
+    width: 100%;
+    height: 100%;
+}
+
+@media (max-width: 576px) {
+    .single-item {
+        margin: 20px;
+    }
+}
+
+.single-item .header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 1rem;
+    -webkit-box-ordinal-group: 4;
+    -webkit-order: 3;
+    -ms-flex-order: 3;
+    order: 3;
+}
+
+.single-item .svg {
+    display: block;
+    margin-right: 0.75rem;
+    position: relative;
+    z-index: 1;
+}
+
+.single-item .svg>svg {
+    display: block;
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    font: 10px/1 monospace;
+}
+
+/*==================================== CONTENT IN EXPERIENCE SECTION ======================================= */
+
+.content ul {
+    padding: 0 0 0 2.75em;
+}
+
+.content ul li {
+    list-style: none;
+    line-height: 1.7rem;
+    position: relative;
+    padding-bottom: 1rem;
+    color: #fff;
+}
+
+.content ul li:before {
+    content: "";
+    display: inline-block;
+    width: .75em;
+    height: .75em;
+    border-radius: 50%;
+    background: #5A9ECF;
+    margin: 0 2em 0 -2.75em;
+}
+
+/*==================================== SOCIAL MEDIA SIDE BAR ======================================= */
+
+svg {
+    width: 24;
+    height: 24;
+    fill: #fff
+}
+
+svg:hover {
+    fill: #5A9ECF;
+}
+
+.hbGQwI {
+    width: 40px;
+    position: fixed;
+    bottom: 0px;
+    left: 40px;
+    right: auto;
+    z-index: 10;
+    color: var(--light-slate);
+}
+
+@media (max-width: 768px) {
+    .hbGQwI {
+        display: none;
+    }
+}
+
+.fyBzSG {
+    display: flex;
+    flex-direction: column;
+    -webkit-box-align: center;
+    align-items: center;
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+.kZcFdB {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .kZcFdB {
+        display: block;
+        width: 100%;
+        max-width: 270px;
+        margin: 0px auto 10px;
+        color: var(--light-slate);
+    }
+}
+
+.kZcFdB ul {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    align-items: center;
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+}
+
+/*==================================== PAGE LOGO ======================================= */
+
+.logo {
+    margin: 0px 0px 0px 10px;
+}
+
+@media (max-width: 1080px) {
+    .logo {
+        margin: 0px 0px 0px 5px;
+    }
+}
+
+.bounce {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    height: 100%;
+    font: normal bold 6rem "Product Sans", sans-serif;
+    white-space: nowrap;
+}
+
+.letter {
+    animation: bounce 0.75s cubic-bezier(0.05, 0, 0.2, 1) infinite alternate;
+    display: inline-block;
+    transform: translate3d(0, 0, 0);
+    margin-top: 0.5em;
+    text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+    font: normal 500 6rem 'Varela Round', sans-serif;
+    font-size: 50px;
+}
+
+.letter:hover {
+    color: #5A9ECF;
+}
+
+#nav a:hover {
+    text-decoration: none;
+}
+
+.letter:nth-of-type(1) {
+    animation-delay: -0.083333333s;
+}
+
+.letter:nth-of-type(3) {
+    animation-delay: 0.0833333333s;
+}
+
+.letter:nth-of-type(4) {
+    animation-delay: 0.1666666667s;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translate3d(0, 0, 0);
+        text-shadow: rgba(255, 255, 255, 0.4) 0 0 0.05em;
+    }
+    100% {
+        transform: translate3d(0, -1em, 0);
+        text-shadow: rgba(255, 255, 255, 0.4) 0 1em 0.35em;
+    }
+}
