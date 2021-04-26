@@ -158,15 +158,15 @@
 
 }
 
-/*
+
 .bookshelf .book8,
 .bookshelf-row .book8{
-	background-image: url("/images/Book_AtomicHabits.jpg");
+	background-image: url("/images/Book_DesigningProductsPeopleLove.jpg");
     background-size: 98px 135px;
     width:98px;
 	height:135px;
 }
-
+/*
 .bookshelf .book9,
 .bookshelf-row .book9{
     background-image: url("/images/Book_CleanCode.jpg");
