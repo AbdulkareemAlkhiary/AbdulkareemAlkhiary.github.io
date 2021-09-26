@@ -1,179 +1,210 @@
-.bookshelf-row{
-	display:none;
+.bookshelf-row {
+    display: none;
 }
 
-.bookshelf{
-	transition:all 1s;
+.bookshelf {
+    transition: all 1s;
 }
 
-.bookshelf{
+.bookshelf {
     display: flex;
     margin-top: 1vh;
     justify-content: center;
 }
 
-.bookshelf .shelf{
-	width:426px;
-	height:440px;
+.bookshelf .shelf {
+    width: 426px;
+    height: 440px;
 }
 
-.bookshelf .shelf .row-1{
-	position:relative;
-	width:100%;
-	height:158px;
+.bookshelf .shelf .row-1 {
+    position: relative;
+    width: 100%;
+    height: 158px;
 }
 
-.bookshelf .shelf .row-2{
-    position:relative;
-    margin-top:20px;
-    width:100%;
-    height:164px;
+.bookshelf .shelf .row-2 {
+    position: relative;
+    margin-top: 20px;
+    width: 100%;
+    height: 164px;
 }
 
-.bookshelf .shelf .row-3{
-    position:relative;
-    margin-top:40px;
-    width:100%;
-    height:172px;
+.bookshelf .shelf .row-3 {
+    position: relative;
+    margin-top: 40px;
+    width: 100%;
+    height: 172px;
+}
+
+.bookshelf .shelf .row-4 {
+    position: relative;
+    margin-top: 60px;
+    width: 100%;
+    height: 180px;
 }
 
 .bookshelf .shelf .row-1:after {
-	background:url("https://netzulim.org/R/OrgR/Library/sherut/shelfR.png");
-	background-size:100%;
-	background-repeat: no-repeat;
-	background-position:bottom left;
-	width:100%;
-	height:210px;
-	display:block;
-	content:"";
+    background: url("https://netzulim.org/R/OrgR/Library/sherut/shelfR.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    width: 100%;
+    height: 210px;
+    display: block;
+    content: "";
 }
 
 .bookshelf .shelf .row-2:after {
-  background:url("https://netzulim.org/R/OrgR/Library/sherut/shelfR.png");
-	background-size:100%;
-	background-repeat: no-repeat;
-	background-position:bottom left;
-	width:100%;
-	height:216px;
-	display:block;
-	content:"";
+    background: url("https://netzulim.org/R/OrgR/Library/sherut/shelfR.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    width: 100%;
+    height: 216px;
+    display: block;
+    content: "";
 }
 
 .bookshelf .shelf .row-3:after {
-    background:url("https://netzulim.org/R/OrgR/Library/sherut/shelfR.png");
-      background-size:100%;
-      background-repeat: no-repeat;
-      background-position:bottom left;
-      width:100%;
-      height:222px;
-      display:block;
-      content:"";
-  }
-
-
-.bookshelf .shelf .loc{
-	position:absolute;
-	bottom:0;
-	width:100%;
+    background: url("https://netzulim.org/R/OrgR/Library/sherut/shelfR.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    width: 100%;
+    height: 222px;
+    display: block;
+    content: "";
 }
 
-.bookshelf .shelf .loc > div{
-	width:33%;
-    height:100%;
+.bookshelf .shelf .row-4:after {
+    background: url("https://netzulim.org/R/OrgR/Library/sherut/shelfR.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+    width: 100%;
+    height: 230px;
+    display: block;
+    content: "";
+}
+
+.bookshelf .shelf .loc {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.bookshelf .shelf .loc>div {
+    width: 33%;
+    height: 100%;
     background-size: contain;
-	float:left;
+    float: left;
 }
 
-.bookshelf .sample,
-.bookshelf-row .sample{
-	margin:auto;
-	position: relative;
-	z-index:1;
-	box-shadow:2px 2px 5px rgba(0,0,0,0.6);
-	transition:transform 0.1s;
-	transform:translate(0, 0);
+.bookshelf .sample, .bookshelf-row .sample {
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    transition: transform 0.1s;
+    transform: translate(0, 0);
 }
 
-.sample:hover{
-	z-index:2;
-	cursor: pointer;;
-	background-color:white;
-	transform: scale3d(1.1, 1.1, 1) translate3d(0, -5px, 0);
+.sample:hover {
+    z-index: 2;
+    cursor: pointer;
+    ;
+    background-color: white;
+    transform: scale3d(1.1, 1.1, 1) translate3d(0, -5px, 0);
 }
 
-.bookshelf .book1,
-.bookshelf-row .book1{
+.bookshelf .book1, .bookshelf-row .book1 {
     background-image: url("/images/Book_DeepWork.jpg");
     background-size: 83px 115px;
-    width:83px;
-	height:115px;
+    width: 83px;
+    height: 115px;
 }
 
-.bookshelf .book2,
-.bookshelf-row .book2{
-	background-image: url("/images/Book_LeanStartup.jpg");
+.bookshelf .book2, .bookshelf-row .book2 {
+    background-image: url("/images/Book_LeanStartup.jpg");
     background-size: 85px 115px;
-    width:85px;
-	height:115px;
+    width: 85px;
+    height: 115px;
 }
 
-.bookshelf .book3,
-.bookshelf-row .book3{
-	background-image: url("/images/Book_ZeroToOne.jpg");
+.bookshelf .book3, .bookshelf-row .book3 {
+    background-image: url("/images/Book_ZeroToOne.jpg");
     background-size: 84px 115px;
-    width:84px;
-	height:115px;
+    width: 84px;
+    height: 115px;
 }
 
-.bookshelf .book4,
-.bookshelf-row .book4{
-	background-image: url("/images/Book_WarrenBuffett.jpg");
+.bookshelf .book4, .bookshelf-row .book4 {
+    background-image: url("/images/Book_WarrenBuffett.jpg");
     background-size: 91px 125px;
-    width:91px;
-	height:125px;
-
+    width: 91px;
+    height: 125px;
 }
-.bookshelf .book5,
-.bookshelf-row .book5{
-	background-image: url("/images/Book_AtomicHabits.jpg");
+
+.bookshelf .book5, .bookshelf-row .book5 {
+    background-image: url("/images/Book_AtomicHabits.jpg");
     background-size: 91px 125px;
-    width:91px;
-	height:125px;
+    width: 91px;
+    height: 125px;
 }
 
-.bookshelf .book6,
-.bookshelf-row .book6{
+.bookshelf .book6, .bookshelf-row .book6 {
     background-image: url("/images/Book_CleanCode.jpg");
     background-size: 91px 125px;
-    width:91px;
-    height:125px;  
+    width: 91px;
+    height: 125px;
 }
 
-.bookshelf .book7,
-.bookshelf-row .book7{
-	background-image: url("/images/Book_HowFinanceWorks.jpg");
+.bookshelf .book7, .bookshelf-row .book7 {
+    background-image: url("/images/Book_HowFinanceWorks.jpg");
     background-size: 98px 135px;
-    width:98px;
-	height:135px;
-
+    width: 98px;
+    height: 135px;
 }
 
-
-.bookshelf .book8,
-.bookshelf-row .book8{
-	background-image: url("/images/Book_DesigningProductsPeopleLove.jpg");
+.bookshelf .book8, .bookshelf-row .book8 {
+    background-image: url("/images/Book_DesigningProductsPeopleLove.jpg");
     background-size: 98px 135px;
-    width:98px;
-	height:135px;
+    width: 98px;
+    height: 135px;
 }
 
-.bookshelf .book9,
-.bookshelf-row .book9{
+.bookshelf .book9, .bookshelf-row .book9 {
     background-image: url("/images/Book_WhereTheCrawdadsSing.jpg");
     background-size: 98px 135px;
-    width:98px;
-    height:135px;
+    width: 98px;
+    height: 135px;
 }
+
+.bookshelf .book10, .bookshelf-row .book10 {
+    background-image: url("/images/Book_TheSecretGarden.jpg");
+    background-size: 105px 145px;
+    width: 105px;
+    height: 145px;
+}
+
+/*
+.bookshelf .book11, .bookshelf-row .book11 {
+    background-image: url("/images/Book_WhereTheCrawdadsSing.jpg");
+    background-size: 105px 145px;
+    width: 105px;
+    height: 145px;
+}
+*/
+
+/*
+.bookshelf .book12, .bookshelf-row .book12 {
+    background-image: url("/images/Book_WhereTheCrawdadsSing.jpg");
+    background-size: 105px 145px;
+    width: 105px;
+    height: 145px;
+}
+*/
 
 /*==================================== LINE UNDER TITLES ======================================= */
 
@@ -213,16 +244,6 @@
 #books {
     height: 600px;
 }
-
-
-
-
-
-
-
-
-
-
 
 /*==================================== MAIN PAGE OVERLAY ======================================= */
 
