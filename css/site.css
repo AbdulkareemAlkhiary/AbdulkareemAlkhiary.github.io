@@ -634,6 +634,13 @@ input[type=text], select, textarea {
 
 /*==================================== CONTENT IN EXPERIENCE SECTION ======================================= */
 
+
+@media (max-width: 992px) {
+    .content-experience {
+        margin-top: -60px;
+    }
+}
+
 .content ul {
     padding: 0 0 0 2.75em;
 }
